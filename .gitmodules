@@ -1,0 +1,3 @@
+[submodule "termq-engine"]
+	path = termq-engine
+	url = git@github.com:jm-janzen/termq-engine.git
