@@ -5,13 +5,15 @@ project (termq_game)
 enable_language(CXX)
 
 # Build termq-engine lib
-include_directories("termq-engine" REQUIRED)
+#include_directories("termq-engine" REQUIRED)
 add_subdirectory(termq-engine)
-install(EXPORT termq_lib-targets DESTINATION lib/termq_game)
 
 # Build termq-game source
-include_directories("game" REQUIRED)
+#include_directories("game" REQUIRED)
 add_subdirectory(game)
 
-#target_link_libraries(termq_game lib/termq_lib)
+#set(header_files "term-engine/inc/*.h")
+file(GLOB_RECURSE lib_inc *.h)
+
+#target_link_libraries(termq_game termq_lib)
 
