@@ -7,9 +7,9 @@ int main() {
     vec2ui v2 = {2,0};
 
     if (v1.x > v2.x) {
-        std::cout << v1.x << " is greater than " << v2.x << std::endl;
+        std::cout << static_cast<int>(v1.x) << " is greater than " << static_cast<int>(v2.x) << std::endl;
     } else {
-        std::cout << v1.x << " is not greater than " << v2.x << std::endl;
+        std::cout << static_cast<int>(v1.x) << " is not greater than " << static_cast<int>(v2.x) << std::endl;
     }
 
 
