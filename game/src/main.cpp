@@ -1,16 +1,28 @@
-#include <iostream>
-#include "game.h"
+#include <thread>
+#include <stdio.h>
+#include <time.h>
+
+#include "menu.h"
+
+using namespace std;
 
 int main() {
 
-    vec2ui v1 = {1,0};
-    vec2ui v2 = {2,0};
+    srand(time(0));
 
-    if (v1.x > v2.x) {
-        std::cout << static_cast<int>(v1.x) << " is greater than " << static_cast<int>(v2.x) << std::endl;
-    } else {
-        std::cout << static_cast<int>(v1.x) << " is not greater than " << static_cast<int>(v2.x) << std::endl;
+    int playerScore = 0;
+
+    if (init() == 0) {
+        playerScore = run();
     }
 
+    close();
 
+    printf("\n~~~ GAME OVER ~~~\n");
+    printf("lifespan:   %d\n", -1);
+    printf("score:      %d\n", playerScore);
+    printf("~~~~~~~~~~~~~~~~~\n");
+
+    return 0;
 }
+
