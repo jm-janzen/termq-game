@@ -2,3 +2,20 @@
 
 Turn-based Roguelike using `termq-engine`.
 
+### Setup
+```
+# Grab game source and engine submodule
+git clone --recurse-submodules git@github.com:jm-janzen/termq-game
+
+# Move to build dir
+cd termq-game/build
+
+# Generate build scripts
+cmake ..
+
+# Build game (and library if required)
+cmake --build .
+
+# Run the game! :D
+../bin/termq_game
+```
